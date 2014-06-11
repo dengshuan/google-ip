@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>IP Addresses of Google Global Cache (www.kookle.co.nr)</title>
+
+<style type="text/css">
+body { background:white;
+       color:black; }
+body, p, td, a { font:14px Arial; }
+p { text-align:center; }
+table { border-collapse:collapse;
+        margin:auto; }
+td { border:1px solid lightgrey;
+     padding:2px; }
+a:link, a:active, a:visited { color:blue;
+                              text-decoration:none; }
+a:hover { color:red; }
+</style>
+
+<script type="text/javascript">
+var list = new Array("Bulgaria", "93.123.23.1/59",
+"Egypt", "197.199.253.1/59",
+"Egypt", "197.199.254.1/59",
+"Hong Kong", "218.189.25.129/187",
+"Hong Kong", "218.253.0.76/92", "218.253.0.140/187",
+"Iceland", "149.126.86.1/59",
+"Indonesia", "111.92.162.4/6", "111.92.162.12/59",
+"Iraq", "62.201.216.196/251",
+"Japan", "218.176.242.4/251",
+"Kenya", "41.84.159.12/30",
+"Korea", "121.78.74.68/123",
+"Mauritius", "41.206.96.1/251",
+"Netherlands", "88.159.13.196/251",
+"Norway", "193.90.147.0/7", "193.90.147.12/59", "193.90.147.76/123",
+"Philippines", "103.25.178.4/6", "103.25.178.12/59",
+"Russia", "178.45.251.4/123",
+"Saudi Arabia", "84.235.77.1/251",
+"Serbia", "213.240.44.5/27",
+"Singapore", "203.116.165.129/255",
+"Singapore", "203.117.34.132/187",
+"Slovakia", "62.197.198.193/251",
+"Slovakia", "87.244.198.161/187",
+"Taiwan", "123.205.250.68/190",
+"Taiwan", "123.205.251.68/123",
+"Taiwan", "163.28.116.1/59",
+"Taiwan", "163.28.83.143/187",
+"Taiwan", "202.39.143.1/123",
+"Taiwan", "203.211.0.4/59",
+"Taiwan", "203.66.124.129/251",
+"Taiwan", "210.61.221.65/187",
+"Taiwan", "60.199.175.1/187",
+"Taiwan", "61.219.131.65/123", "61.219.131.193/251",
+"Thailand", "1.179.248.4/59", "1.179.248.68/123", "1.179.248.132/187", "1.179.248.196/251",
+"Thailand", "1.179.249.4/59", "1.179.249.68/123", "1.179.249.132/187", "1.179.249.196/251",
+"Thailand", "1.179.250.4/59", "1.179.250.68/123", "1.179.250.132/187", "1.179.250.196/251",
+"Thailand", "1.179.251.4/59", "1.179.251.68/123", "1.179.251.140/187", "1.179.251.196/251",
+"Thailand", "1.179.252.68/123", "1.179.252.132/187", "1.179.252.196/251",
+"Thailand", "1.179.253.4/59", "1.179.253.76/123",
+"Thailand", "118.174.25.4/59", "118.174.25.68/123", "118.174.25.132/187", "118.174.25.196/251");
+
+var total, ip, part, position, min, max, main, count;
+
+document.write("<p>IP Addresses of Google Global Cache<br /><a href='http://www.kookle.co.nr'>www.kookle.co.nr</a></p>");
+document.write("<p><table><tr>");
+total=0;
+for (ip in list)
+  if (list[ip].indexOf(".") < 0)
+  { document.write("<td style='font-weight:bold; color:red'>" + list[ip] + "</td>");
+    total++;
+    if (total % 10 == 0)
+      document.write("</tr><tr>"); }
+  else
+  { part = list[ip].split(".");
+    position = part[3].indexOf("/");
+    min = parseInt(part[3].substr(0, position));
+    max = parseInt(part[3].substr(position + 1));
+    main = part[0] + "." + part[1] + "." + part[2] + ".";
+    for (count = min; count <= max; count++)
+    { document.write("<td><a href='http://" + main + count + "' target='_blank'>" + main + count + "</a></td>");
+      total++;
+      if (total % 10 == 0)
+        document.write("</tr><tr>"); } }
+document.write("</tr></table></p>");
+document.write("<p>Total " + total + "<br /><a href='mailto:kookle.co.nr@gmail.com'>kookle.co.nr@gmail.com</a></p>");
+</script>
+
+<body>
+
+<p><a href="http://www.freedomain.co.nr" target="_blank" title="Free Domain"><img src="http://ermrzsa.imdrv.net/co-nr.gif" width="88" height="31" border="0" alt="Free Domain" /></a></p>
+
+</body>
+</html>
+
+<!--
+"Romania", "89.114.195.0/255",
+"Thailand", "118.174.24.0/255",
+"Thailand", "118.174.26.0/255",
+-->
